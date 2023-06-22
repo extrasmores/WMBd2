@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WMDb</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/93d52f917e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/93d52f917e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <section id="nav__background">
-        <nav>
-            <img class="logo" src="./assets/popcorn-svgrepo-com.svg" alt="">
-            <ul class="nav__links">
-                <li><a href="#" class="nav__link link__hover-effect">Home</a></li>
-                <li><a href="#" class="nav__link link__hover-effect">Find your movie</a></li>
-                <li><a href="#" class="nav__link">CONTACT</a></li>
-            </ul>
-        </nav>
-    <div class="content__wrapper">
+      <nav>
+        <img class="logo" src="./assets/popcorn-svgrepo-com.svg" alt="" />
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link link__hover-effect">Home</a></li>
+          <li>
+            <a href="#" class="nav__link link__hover-effect">Find your movie</a>
+          </li>
+          <li><a href="#" class="nav__link">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="content__wrapper">
         <h1 class="title">Browse our Movies</h1>
         <form class="input__wrapper" onsubmit="renderMovies(event)">
-            <input id="searchInput" type="text" placeholder="Search by Title or Year">
-            <button class="content__search--button" onclick="renderMovies()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search by Title or Year"
+          />
+          <button class="content__search--button" onclick="renderMovies()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </form>
-    </div>
+      </div>
     </section>
     <section id="movies">
+      <div class="row">
+        <div class="movies__container">
+          <h2>Results:</h2>
+          <select
+            class="filter__movies"
+            id="filter"
+            onchange="filterMovies(event)"
+          >
+            <option value="" disabled selected>Sort</option>
+            <option value="NEW_TO_OLD">New to Old</option>
+            <option value="OLD_TO_NEW">Old to New</option>
+          </select>
+        </div>
+        <div class="movies movies__loading">
+          <i class="fas fa-spinner movies__loading--spinner"></i>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
         <div class="row">
-            <div class="movies__container">
-                <h2>Results:</h2>
-                <select class="filter__movies" id="filter" onchange="filterMovies(event)">
-                    <option value="" disabled selected>Sort</option>
-                    <option value="NEW_TO_OLD">New to Old</option>
-                    <option value="OLD_TO_NEW">Old to New</option>
-                </select>
-            </div>
-            <div class="movies movies__loading">
-                <i class="fas fa-spinner movies__loading--spinner"></i>
+            <div class="footer__info">API credited to OMBd
+                © Torin Williamson 
             </div>
         </div>
-    </section>
-</body>
+    </div>
+</footer>
+  </body>
 </html>
