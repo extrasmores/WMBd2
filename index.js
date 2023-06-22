@@ -1,6 +1,8 @@
 const moviesWrapper = document.querySelector(".movies");
 
 moviesWrapper.classList += " movies__loading";
+moviesWrapper.classList.remove("movies__loading");
+
 
 async function renderMovies(filter) {
   event.preventDefault();
