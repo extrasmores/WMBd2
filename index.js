@@ -11,7 +11,7 @@ async function renderMovies(filter) {
   await timeout(1000);
 
   const movies = await fetch(
-    `http://www.omdbapi.com/?apikey=1f280777&s=${query}`
+    `https://www.omdbapi.com/?apikey=1f280777&s=${query}`
   );
   const moviesData = await movies.json();
   const moviesArray = moviesData.Search;
