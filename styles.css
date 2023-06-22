@@ -65,6 +65,7 @@ input {
   border-radius: 50px;
   border: none;
   background-color: rgba(255, 255, 255, 0.884);
+  margin-bottom: 32px;
 }
 
 input:focus {
@@ -101,9 +102,7 @@ section {
 
 .logo {
   width: 100px;
-  height: 80px;
-  margin-top: 64px;
-  margin-left: 32px;
+  height: 150px;
   filter: invert();
 }
 
@@ -129,11 +128,9 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 86px;
 }
 
 .input__wrapper {
-  margin-top: 12px;
   width: 50%;
   height: 55%;
   position: relative;
@@ -147,7 +144,7 @@ section {
 .fa-magnifying-glass {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -1.9vh;
   bottom: 0;
   color: black;
   width: 20px;
@@ -161,7 +158,6 @@ section {
 
 #nav__background {
   background-color: #242424;
-  height: 40vh;
   background-image: url(./assets/tyson-moultrie-BQTHOGNHo08-unsplash.jpg);
   background-size: cover;
   background-position: 50%;
